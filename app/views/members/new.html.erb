@@ -1,0 +1,9 @@
+<h1>Create your account</h1>
+
+<%= form_for @member, url: member_creation_path do |form| %>
+  <%= form.label "Username:" %>
+  <%= form.text_field :username %> <br />
+  <% form.text_field :eth_address, readonly: true, class: "eth_address" %> <br />
+  <%= form.submit "Sign-up with Ethereum" %>
+<% end %>
+
